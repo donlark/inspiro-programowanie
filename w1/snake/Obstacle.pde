@@ -1,30 +1,30 @@
-class Obstackle {
-   ArrayList<Obj> obstackles=new ArrayList<Obj>();
+class Obstacle {
+   ArrayList<Obj> obstacles=new ArrayList<Obj>();
    Obj target;
    Obj start;
    
-   public Obstackle(int no){
+   public Obstacle(int no){
       switch(no){
         case 1:
-           obstackles.add(o(8,9));     
+           obstacles.add(o(8,9));     
            target=t(8,2);
            start=s(8,16);
            break;
         case 2:
-           obstackles.add(o(8,9));     
-           obstackles.add(o(8,10));
-           obstackles.add(o(8,11));
+           obstacles.add(o(8,9));     
+           obstacles.add(o(8,10));
+           obstacles.add(o(8,11));
            target=t(8,2);
            start=s(8,16);
            break;
         case 3:
-           obstackles.add(o(4,5));     
-           obstackles.add(o(5,5));
-           obstackles.add(o(6,5));
+           obstacles.add(o(4,5));     
+           obstacles.add(o(5,5));
+           obstacles.add(o(6,5));
            
-           obstackles.add(o(10,5));     
-           obstackles.add(o(11,5));
-           obstackles.add(o(12,5));
+           obstacles.add(o(10,5));     
+           obstacles.add(o(11,5));
+           obstacles.add(o(12,5));
            
            target=t(6,2);
            start=s(8,15);
@@ -45,7 +45,7 @@ class Obstackle {
     }
     
     public ArrayList<Obj> get(){
-      return obstackles;
+      return obstacles;
     }
     
     public Obj getTarget(){

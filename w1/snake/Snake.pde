@@ -20,14 +20,16 @@ class Snake{
       smoothSnake=new SmoothSnake(snake,5);
    } 
    
-   public void obstackles(int no){
-     Obstackle o=new Obstackle(no);
+   public void obstacles(int no){
+     Obstacle o=new Obstacle(no);
       grid.addObjects(o.get());
       target=o.getTarget();
       startAt(o.getStart().x,o.getStart().y);
    }
    
    public boolean move(int xs, int ys){
+       reset();
+       
        snake.x+=xs;
        snake.y+=ys;
        if(grid.collision(snake) || grid.outOfArea(snake)){
