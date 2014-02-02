@@ -6,6 +6,8 @@ class Grid {
    
    ArrayList<Obj> objects=new ArrayList<Obj>();
    
+   final PFont FONT = createFont("Arial",16,true);
+   
    public Grid(int areaWidth, int areaHeight, int resW, int resH){
       nWidth=areaWidth/resW;
       nHeight=areaHeight/resH;
@@ -68,6 +70,12 @@ class Grid {
    
    public int fromAreaY(int areaY){
       return areaY/resHeight; 
+   }
+   
+   public void displayStatus(String msg){
+     textFont(FONT,20);
+     fill(255);
+     text(msg,resWidth,(nHeight-1)*resHeight);
    }
 }
 

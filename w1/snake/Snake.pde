@@ -9,6 +9,7 @@ class Snake{
    
    GlowingObj glowingSnake;
    SmoothSnake smoothSnake;
+   int movesCount=0;
    
    public Snake(int areaWidth, int areaHeight, int res){
      grid=new Grid(areaWidth, areaHeight,res,res); 
@@ -36,6 +37,8 @@ class Snake{
           return false;
        }
        smoothSnake.updateMove();
+       
+       movesCount+=abs(xs)+abs(ys);
        
        if(target.collision(snake)){
           snake.objColor=color(26,255,0);
@@ -65,6 +68,8 @@ class Snake{
        }
        grid.displayObj(glowingSnake);
      } 
+     
+     grid.displayStatus("krok "+movesCount);
       
    }
    
