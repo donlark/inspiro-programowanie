@@ -1,7 +1,4 @@
 
-int x;
-int y;
-
 PFont czcionka = createFont("Arial",16,true);
 
 void setup(){
