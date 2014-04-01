@@ -11,6 +11,7 @@ void draw(){
   
   translate(mouseX, mouseY);
   
+  //scale(2.0);
   rysujLinie();
 }
 
