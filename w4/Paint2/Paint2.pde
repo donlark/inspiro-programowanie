@@ -1,6 +1,7 @@
 
 color kolor=color(0,0,0);
 boolean rysuje = false;
+int numerek=1;
 
 void setup(){
   size(600, 600); 
@@ -80,6 +81,16 @@ void mouseReleased(){
     rysuje = false;
   }
 } 
+
+void keyPressed(){
+   if(key == ' '){
+      String plik = "moj_obrazek"+numerek+".jpg";
+      save(plik);
+      println("Zapisano plik: "+plik);
+      
+      numerek = numerek + 1;
+   } 
+}
 
 
 
